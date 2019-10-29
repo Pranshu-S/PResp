@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> FARC WEBPAGE </title>
+	<style>
+	
+	body
+	{
+	margin:0;
+	}
+	
+	.topbar
+	{
+	 overflow: hidden;
+	 background-color: black;
+	 box-shadow: 0px 0px 5px;
+	}
+	
+	.topbar a{
+	float: left;
+	color: white;
+	text-decoration:none;
+	text-align:center;
+	padding: 14px 16px;
+	font-size:18px;
+	}
+	
+	.topbar a.active{
+	background-color: green;
+	color: white; }
+	
+	.topbar a:hover{
+	background-color: #ddd;
+	color: black; }
+	
+	.slideshowbox
+	{
+	position:relative; 
+	margin: auto;
+	height: 80%;
+	}
+	
+	.image{
+	display: none; 
+	object-fill:fit;
+	}
+
+	.image img{
+	width: 100%;
+	height: 500px;
+	}
+	 
+	 .column
+	 {
+	 flex: 33%;
+	  padding: 5px;
+	 }
+	 
+	 .column img
+	 {
+	 height: 300px; 
+	 width: 100%;
+	 }
+	 
+	 .row
+	 {
+	 display: flex;
+	 }
+	 
+	</style>
+  </head>
+  <body ccID="892">
+   <div ccID="903" class="topbar">
+   <a ccID="928" class="active" href="#home">Home</a>
+   <a ccID="972" href="#Page2">Page2</a>
+   <a ccID="1003" href="#Page3">Page3</a>
+   </div>
+   
+   <div ccID="1050">
+    <div ccID="1061" class="slideshowbox">
+     <div ccID="1094" class="image">
+      <img ccID="1121" src="B.jpeg">
+     </div>
+     <div ccID="1159" class="image">
+	  <img ccID="1183" src="A.jpeg">
+	 </div>
+    </div>
+    <div ccID="1229">
+     <button ccID="1241" onclick="ishow(-1)">Back</button>
+     <button ccID="1289" onclick="ishow(1)">Next</button>
+    </div>
+   </div>
+   
+   <div ccID="1362">
+    <div ccID="1373">
+     <h3 ccID="1385" align="center">Explore Our Skies</h3>
+    </div>
+	<div ccID="1441" class="row">
+	 <div ccID="1462" class="column">
+	  <img ccID="1487" src="C.jpg">
+	 </div>
+	 <div ccID="1518" class="column">
+	  <img ccID="1543" src="D.jpg">
+	 </div>
+	 <div ccID="1574" class="column">
+	  <img ccID="1599" src="A.jpeg">
+	 </div>
+	</div>
+	</div>
+  <script ccID="1649">
+  var index = 0;
+  ishow(0);
+  
+  function ishow(i)
+  {
+   var obj = document.getElementsByClassName("image");
+   var limit = obj.length;
+   index = index + i;
+   if( index>limit)
+   {
+   index = 1;
+   }
+   if(index<1)
+   {
+   index = limit;
+   }
+   for( i = 0; i<limit; i++)
+   {
+   obj[i].style.display="none";
+   }
+   obj[index-1].style.display ="block";
+  }
+  </script>
+  
+  
+  </body>
+</html>
