@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> FARC WEBPAGE </title>
+	<style>
+	
+	body
+	{
+	margin:0;
+	}
+	
+	.topbar
+	{
+	 overflow: hidden;
+	 background-color: black;
+	 box-shadow: 0px 0px 5px;
+	}
+	
+	.topbar a{
+	float: left;
+	color: white;
+	text-decoration:none;
+	text-align:center;
+	padding: 14px 16px;
+	font-size:18px;
+	}
+	
+	.topbar a.active{
+	background-color: green;
+	color: white; }
+	
+	.topbar a:hover{
+	background-color: #ddd;
+	color: black; }
+	
+	.slideshowbox
+	{
+	position:relative; 
+	margin: auto;
+	height: 80%;
+	}
+	
+	.image{
+	display: none; 
+	object-fill:fit;
+	}
+
+	.image img{
+	width: 100%;
+	height: 500px;
+	}
+	 
+	 .column
+	 {
+	 flex: 33%;
+	  padding: 5px;
+	 }
+	 
+	 .column img
+	 {
+	 height: 300px; 
+	 width: 100%;
+	 }
+	 
+	 .row
+	 {
+	 display: flex;
+	 }
+	 
+	 .searchbox
+	 {
+	  float: right;
+	 }
+	 
+	 .searchbox input[type=text] 
+	 {
+	 padding: 3px;
+	 margin-top: 7px;
+	 font-size: 17px;
+	 border: none;
+	 }
+	 
+	 .searchbox button
+	 {
+	 float: left;
+	 text-align:center;
+	 background: green;
+	 border: none;
+	 margin-top: 7px;
+	 padding: 6px;
+	 }
+	 
+	 .centered 
+	 {
+	 position: absolute;
+	 top: 80%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 }
+	 
+	 .container {
+	 position: relative;
+	 text-align: center;
+	 color: Black;
+	 }
+	 
+	</style>
+  </head>
+  <body>
+   <div class="topbar">
+   <a class="active" href="#home">Home</a>
+   <a href="#Page2">Page2</a>
+   <a href="#Page3">Page3</a>
+   <div class="searchbox">
+    <form action="/action_page.php" target="_blank">
+     <input type="text" placeholder="Search">
+	 <button>GO</button>
+	</form>
+   </div>
+   </div>
+   
+   <div>
+    <div class="slideshowbox">
+     <div class="image">
+      <img src="B.jpeg">
+     </div>
+     <div class="image">
+	  <img src="A.jpeg">
+	 </div>
+    </div>
+    <div>
+     <button onclick="ishow(-1)">Back</button>
+     <button onclick="ishow(1)">Next</button>
+    </div>
+   </div>
+   
+   <div>
+    <div>
+     <h3 align="center">Explore Our Skies</h3>
+    </div>
+	<div class="row">
+	 <div class="column">
+	  <div class="container">
+	   <img src="C.jpg">
+	   <div class="centered">
+	    <h3>
+		 AIM
+		</h3>
+	   </div>
+	  </div>
+	 </div>
+	 <div class="column">
+	  <div class="container">
+	   <img src="D.jpg">
+	   <div class="centered">
+	    <h3>
+		 DESIGNS AND PLANES
+		<h3>
+	   </div>
+	  </div>
+	 </div>
+	 <div class="column">
+	  <div class="container">
+	   <img src="A.jpeg">
+	   <div class="centered">
+	    <h3>
+		 Achievements
+		</h3>
+	   </div>
+	  </div>
+	 </div>
+	</div>
+	</div>
+	
+  <script>
+  var index = 0;
+  ishow(0);
+  
+  function ishow(i)
+  {
+   var obj = document.getElementsByClassName("image");
+   var limit = obj.length;
+   index = index + i;
+   if( index>limit)
+   {
+   index = 1;
+   }
+   if(index<1)
+   {
+   index = limit;
+   }
+   for( i = 0; i<limit; i++)
+   {
+   obj[i].style.display="none";
+   }
+   obj[index-1].style.display ="block";
+  }
+  </script>
+  
+  
+  </body>
+</html>
