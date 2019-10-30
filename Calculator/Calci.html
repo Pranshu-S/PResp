@@ -9,24 +9,42 @@
 	 {
 	  margin-top:50px;
 	  text-align:center;
-	  color: Orange;
+	  color: Black;
 	  }
+	  
+	  input[type=button]
+	  {
+	   width:100%;
+	   padding: 10px;
+	    }
+	 
+	  input[type=text]
+	  {
+	   width:96.5%;
+	   padding: 10px;
+	   }
+		
+	 table
+	 {
+	  width:70%; 
+      margin-left:15%; 
+      margin-right:15%;
+	 }
 	  
 	 </style>
 	 
   </head>
   <body>
   <div class="Heading">
-   <h3>
-    Calculator in HTML using JS
-   </h3>
+   <h2>
+    CALCULATOR USING HTML AND JAVASCRIPT
+   </h2>
   </div>
   
-  </div class="table">
    <table>
    <tr>
     <td colspan="3">
-     <input type="text" id="result" readonly>
+     <input type="text" id="result">
 	</td>
 	<td>
 	 <input type="button" value="AC" onClick="clr()">
@@ -87,12 +105,11 @@
 	 <input type="button" value="*" onClick="insert('*')">
 	</td>
    </table>
-  </div>
   
   <script>
   
   
-     var prev = 0
+     var prev = 4
 	 function insert(val)
 	 {
 	  document.getElementById('result').value+=val
@@ -112,7 +129,7 @@
 	  
 	 function showans()
 	 {
-	  document.getElementById('result').value=prev;
+	  document.getElementById('result').value=prev
 	 }
   </script>
 	
