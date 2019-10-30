@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> CALCULATOR</title>
+	
+	<style>
+	 .Heading
+	 {
+	  margin-top:50px;
+	  text-align:center;
+	  color: Black;
+	  }
+	  
+	  input[type=button]
+	  {
+	   width:100%;
+	   padding: 10px;
+	    }
+	 
+	  input[type=text]
+	  {
+	   width:100%;
+	   padding: 10px;
+	   }
+		
+	 table
+	 {
+	  width:70%; 
+      margin-left:15%; 
+      margin-right:15%;
+	 }
+	  
+	 </style>
+	 
+  </head>
+  <body ccID="481">
+  <div ccID="491" class="Heading">
+   <h2 ccID="517">
+    CALCULATOR USING HTML AND JAVASCRIPT
+   </h2>
+  </div>
+  
+   <table ccID="592">
+   <tr ccID="604">
+    <td ccID="614" colspan="3">
+     <input ccID="637" type="text" id="result">
+	</td>
+	<td ccID="679">
+	 <input ccID="687" type="button" value="AC" onClick="clr()">
+	</td>
+   <tr ccID="748">
+    <td ccID="758">
+	 <input ccID="766" type="button" value ="1" onClick="insert('1')">
+	</td>
+	<td ccID="831">
+	 <input ccID="839" type="button" value="2" onClick="insert('2')">
+	</td>
+	<td ccID="903">
+	 <input ccID="911" type="button" value ="3" onClick="insert('3')">
+	</td>
+	<td ccID="976">
+	 <input ccID="984" type="button" value="/" onClick="insert('/')">
+	</td>
+   </tr>	
+   <tr ccID="1061">
+    <td ccID="1071">
+	 <input ccID="1079" type="button" value="4" onClick="insert('4')">
+	</td>
+	<td ccID="1143">
+	 <input ccID="1151" type="button" value="5" onClick="insert('5')">
+	</td>
+	<td ccID="1215">
+	 <input ccID="1223" type="button" value="6" onClick="insert('6')">
+	</td>
+	<td ccID="1287">
+	 <input ccID="1295" type="button" value="-" onClick="insert('-')">
+	</td>
+   </tr>
+   <tr ccID="1371">
+    <td ccID="1381">
+	 <input ccID="1389" type="button" value="7" onClick="insert('7')">
+	</td>
+	<td ccID="1453">
+	 <input ccID="1461" type="button" value="8" onClick="insert('8')">
+	</td>
+	<td ccID="1525">
+	 <input ccID="1533" type="button" value="9" onClick="insert('9')">
+	</td>
+	<td ccID="1597">
+	 <input ccID="1605" type="button" value="+" onClick="insert('+')">
+	</td>
+   </tr>
+   <tr ccID="1681">
+    <td ccID="1691">
+	 <input ccID="1699" type="button" value="Ans" onClick="showans()">
+	</td>
+    <td ccID="1766">
+	 <input ccID="1774" type="button" value="0" onClick="insert('0')">
+	</td>
+	<td ccID="1838">
+	 <input ccID="1846" type="button" value="=" onClick="solve()">
+	</td>
+	<td ccID="1906">
+	 <input ccID="1914" type="button" value="*" onClick="insert('*')">
+	</td>
+   </table>
+  
+  <script ccID="1996">
+  
+  
+     var prev = 4
+	 function insert(val)
+	 {
+	  document.getElementById('result').value+=val
+	 }
+	 
+	 function solve()
+	 {
+	  var x = document.getElementById('result').value
+	  prev = eval(x)
+	  document.getElementById('result').value=eval(x)
+	 }
+	 
+	 function clr()
+	 {
+	  document.getElementById('result').value=""
+	 }
+	  
+	 function showans()
+	 {
+	  document.getElementById('result').value=prev
+	 }
+  </script>
+	
+	
+  </body>
+</html>
