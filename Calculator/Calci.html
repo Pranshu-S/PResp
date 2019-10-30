@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> CALCULATOR</title>
+	
+	<style>
+	 .Heading
+	 {
+	  margin-top:50px;
+	  text-align:center;
+	  color: Orange;
+	  }
+	  
+	 </style>
+	 
+  </head>
+  <body>
+  <div class="Heading">
+   <h3>
+    Calculator in HTML using JS
+   </h3>
+  </div>
+  
+  </div class="table">
+   <table>
+   <tr>
+    <td colspan="3">
+     <input type="text" id="result" readonly>
+	</td>
+	<td>
+	 <input type="button" value="AC" onClick="clr()">
+	</td>
+   <tr>
+    <td>
+	 <input type="button" value ="1" onClick="insert('1')">
+	</td>
+	<td>
+	 <input type="button" value="2" onClick="insert('2')">
+	</td>
+	<td>
+	 <input type="button" value ="3" onClick="insert('3')">
+	</td>
+	<td>
+	 <input type="button" value="/" onClick="insert('/')">
+	</td>
+   </tr>	
+   <tr>
+    <td>
+	 <input type="button" value="4" onClick="insert('4')">
+	</td>
+	<td>
+	 <input type="button" value="5" onClick="insert('5')">
+	</td>
+	<td>
+	 <input type="button" value="6" onClick="insert('6')">
+	</td>
+	<td>
+	 <input type="button" value="-" onClick="insert('-')">
+	</td>
+   </tr>
+   <tr>
+    <td>
+	 <input type="button" value="7" onClick="insert('7')">
+	</td>
+	<td>
+	 <input type="button" value="8" onClick="insert('8')">
+	</td>
+	<td>
+	 <input type="button" value="9" onClick="insert('9')">
+	</td>
+	<td>
+	 <input type="button" value="+" onClick="insert('+')">
+	</td>
+   </tr>
+   <tr>
+    <td>
+	 <input type="button" value="Ans" onClick="showans()">
+	</td>
+    <td>
+	 <input type="button" value="0" onClick="insert('0')">
+	</td>
+	<td>
+	 <input type="button" value="=" onClick="solve()">
+	</td>
+	<td>
+	 <input type="button" value="*" onClick="insert('*')">
+	</td>
+   </table>
+  </div>
+  
+  <script>
+  
+  
+     var prev = 0
+	 function insert(val)
+	 {
+	  document.getElementById('result').value+=val
+	 }
+	 
+	 function solve()
+	 {
+	  var x = document.getElementById('result').value
+	  var prev = eval(x)
+	  document.getElementById('result').value=eval(x)
+	 }
+	 
+	 function clr()
+	 {
+	  document.getElementById('result').value=""
+	 }
+	  
+	 function showans()
+	 {
+	  document.getElementById('result').value=prev;
+	 }
+  </script>
+	
+	
+  </body>
+</html>
