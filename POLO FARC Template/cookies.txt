@@ -1,0 +1,11 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+revolutioncdn-themepunchgbr.netdna-ssl.com	TRUE	/	FALSE	1999999999	cookielawinfo-checkbox-necessary	yes
+.google.com	TRUE	/	FALSE	1999999999	NID	195=Hrppf1V5qf5gtnVM_Os0_5Kn3_ZttVO572KpI_e6ZazesshCbpSFfX6Mtcm-r0cH5ZFIKAv3BSNVX2El7GRe4JOarsVABUa7mT_f_oEzBdlehWLimfb85sai-8-WR4KjFQNCLmoR7mYkXgqy4MkMgx2jVgHLTyCUOVcjGH5yIdw
+.pinterest.com	TRUE	/	FALSE	1999999999	__cfduid	de9e7e7a116e1c2845b5b8c6c1b6315871578583503
+assets.pinterest.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.themepunch.com	TRUE	/	FALSE	1999999999	__cfduid	d31b2a7f8551142b19a5982be1e23635d1578634662
+revolutioncdn-themepunchgbr.netdna-ssl.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.inspirothemes.com	TRUE	/	FALSE	1999999999	__cfduid	d6317780122c31536df88ac937b785a411578642192
+inspirothemes.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+
